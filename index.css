@@ -1,0 +1,46 @@
+/* .wrapper{
+    width: 100vw;
+    height: 100vh;
+} */
+
+.card {
+    display: inline-block;
+    margin: 30px 0 0 30px ;
+    width: 80px;
+    height: 120px;
+    perspective: 200px;
+}
+
+.card-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+
+.card.fliped .card-wrap {
+    transform: rotateY(-180deg);
+    
+} 
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 1px solid black;
+}
+
+
+
+.front {
+    background-color: darkslateblue;
+    backface-visibility: hidden;
+}
+.back {
+    background-color: lightsteelblue;
+    transform: rotateY(180deg);
+    
+    
+}
