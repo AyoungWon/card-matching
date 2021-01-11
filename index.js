@@ -18,7 +18,8 @@ function init(){
 
 
 //card setting
-for(i = 0; i < ver; i++){   
+for(i = 0; i < ver; i++){
+   
     var line = document.createElement('div');
     line.className = 'line';
     for(j=0; j<hor; j++){
@@ -81,9 +82,12 @@ e.currentTarget.classList.toggle('fliped');
                 card1.classList.remove('fliped');
                 card2.classList.remove('fliped');
                 count = 1;
+                
+            },1000)
+            setTimeout(function(){
                 state='';
                 console.log(state);
-            },1000)
+            },1100)
             
         }else{
             count=1;
